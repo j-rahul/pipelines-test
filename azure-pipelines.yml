@@ -14,6 +14,7 @@ pr:
   paths:
     include:
     - prtestpath
+    - somepath
 
 pool: 'Default'
 
