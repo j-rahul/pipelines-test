@@ -3,8 +3,17 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+# specific path build
 trigger:
-- master
+  branches:
+    include:
+    - master
+    - releases/*
+  paths:
+    include:
+    - cipath
+    exclude:
+    - docs/README.md
 
 # specific path build
 pr:
