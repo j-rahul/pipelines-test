@@ -5,16 +5,9 @@
 
 # specific path build
 trigger:
-  branches:
-    include:
-    - master
-    - users/raja/*
-  paths:
-    include:
-    - cipath
-    exclude:
-    - docs/README.md
-
+- master
+- releases/*
+    
 # specific path build
 pr:
   branches:
