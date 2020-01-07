@@ -18,7 +18,9 @@ pr:
     - prtestpath
     - somepath
 
-pool: 'Azure Pipelines'
+pool: 
+  name: 'Azure Pipelines'
+  vmImage: 'vs2017-win2016'
 
 steps:
 - script: echo Hello, world!
