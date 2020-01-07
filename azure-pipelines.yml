@@ -18,7 +18,7 @@ pr:
     - prtestpath
     - somepath
 
-pool: 'Default'
+pool: 'Azure Pipelines'
 
 steps:
 - script: echo Hello, world!
