@@ -10,28 +10,17 @@ trigger:
     
 # specific path build
 pr:
-  branches:
-    include:
-    - master
-  paths:
-    include:
-    - prtestpath
-    - somepath
+ autoCancel: true
 
 pool: 
   name: 'Azure Pipelines'
   vmImage: 'vs2017-win2016'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
-
-- script: |
-    echo Print VSTS.DisableFetchByCommit
-    echo $(VSTS.DisableFetchByCommit)
-  displayName: 'Print VSTS.DisableFetchByCommit'
+- task: PowerShell@2
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your PowerShell commands here.
+      Write-Host "Sleeping for 180 secs"
+      Start-Sleep -s 180
