@@ -12,9 +12,7 @@ trigger:
 pr:
  autoCancel: true
 
-pool: 
-  name: 'Azure Pipelines'
-  vmImage: 'vs2017-win2016'
+pool: 'Default'
 
 steps:
 - task: PowerShell@2
