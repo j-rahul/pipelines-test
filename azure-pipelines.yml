@@ -3,17 +3,18 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-# specific path build
 trigger:
-- master
-- releases/*
+  branches:
+    include:
+      - refs/tags/mytag1
+    exclude:
+      - refs/tags/mytag2
     
 # specific path build
 pr:
  autoCancel: true
 
-pool: 
-  VmImage: vs2017-win2016
+pool: 'Default'
 
 steps:
 - task: PowerShell@2
