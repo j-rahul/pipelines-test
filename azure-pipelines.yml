@@ -14,8 +14,7 @@ trigger:
 pr:
  autoCancel: true
 
-pool: 
-  vmImage: vs2017-win2016
+pool: 'Default'
 
 steps:
 - task: PowerShell@2
