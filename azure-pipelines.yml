@@ -3,15 +3,15 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-name: Monitor AKS AAT 00 Helm Releases
-pr: none
-schedules:
-- cron: '*/2 * * * Mon-Fri'
-  displayName: 'everyday'
-  branches:
-    include:
-      - master
-  always: 'true'
+# name: Monitor AKS AAT 00 Helm Releases
+# pr: none
+# schedules:
+# - cron: '*/2 * * * Mon-Fri'
+#   displayName: 'everyday'
+#   branches:
+#     include:
+#       - master
+#   always: 'true'
 
 # name: AKS Cleanup Preview
 # trigger: none
