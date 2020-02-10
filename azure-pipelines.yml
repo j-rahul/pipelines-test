@@ -3,18 +3,18 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
+name: Monitor AKS AAT 00 Helm Releases
+pr: none
+schedules:
+- cron: '*/2 * * * Mon-Fri'
+  displayName: 'everyday'
   branches:
     include:
-      - refs/tags/mytag1
-    exclude:
-      - refs/tags/mytag2
-    
-# specific path build
-pr:
- autoCancel: true
+      - master
+  always: 'true'
 
-pool: 'Default'
+pool: 
+  vmImage: vs2017-win2016
 
 steps:
 - task: PowerShell@2
