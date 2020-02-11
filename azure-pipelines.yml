@@ -21,6 +21,6 @@ steps:
   inputs:
     targetType: 'inline'
     script: |
-      # Write your PowerShell commandshere.
+      # Write your PowerShell commands here.
       # Write-Host "Sleeping for 180 secss"
       # Start-Sleep -s 180
