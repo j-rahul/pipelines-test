@@ -17,7 +17,7 @@ resources:
   repositories:
   - repository: sources
     type: github
-    name: pipelines-java
+    name: j-rahul/pipelines-java
     ref: 'refs/heads/master'
     endpoint: gh-source-connection
 
