@@ -3,25 +3,36 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-name: Monitor AKS AAT 00 Helm Releases
-pr: none
-schedules:
-- cron: '*/2 * * * Mon-Fri'
-  displayName: 'everyday'
+trigger:
   branches:
     include:
-      - master
-  always: 'true'
+      - refs/tags/*
 
-pool: 
-  vmImage: vs2017-win2016
+pr:
+ autoCancel: true  
 
+pool: 'Default'
+
+resources:
+  repositories:
+  - repository: sources
+    type: github
+    name: pipelines-java
+    ref: 'refs/heads/master'
+    endpoint: gh-source-connection
 
 steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
 - task: PowerShell@2
   inputs:
     targetType: 'inline'
     script: |
       # Write your PowerShell commands here.
-      # Write-Host "Sleeping for 180 secsssssssss"
+      # Write-Host "Sleeping for 180 secs"
       # Start-Sleep -s 180
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
