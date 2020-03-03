@@ -6,20 +6,14 @@
 trigger:
   branches:
     include:
-      - refs/tags/*
-
+    - '*'
+    exclude:
+    - 'refs/tags/*'
 pr:
  autoCancel: true  
 
-pool: 'Default'
-
-resources:
-  repositories:
-  - repository: sources
-    type: github
-    name: j-rahul/pipelines-java
-    ref: 'refs/heads/master'
-    endpoint: gh-source-connection
+pool: 
+  vmImage: vs2017-win2016
 
 steps:
 - script: echo Hello, world!
