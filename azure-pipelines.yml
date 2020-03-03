@@ -7,8 +7,8 @@ trigger:
   branches:
     include:
     - '*'
-    exclude:
-    - 'refs/tags/*'
+    - refs/tags/*
+    
 pr:
  autoCancel: true  
 
