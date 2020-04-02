@@ -11,24 +11,15 @@ trigger:
     exclude:
     - '*'
     
-pr:
- autoCancel: true  
-
 pool: 
   vmImage: vs2017-win2016
 
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Write your PowerShell commands here.
-      # Write-Host "Sleeping for 180 secs"
-      # Start-Sleep -s 180
+  
+- script: echo System.PullRequest.SourceBranch value is $(System.PullRequest.SourceBranch)
+  displayName: 'System.PullRequest.SourceBranch value'
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+- script: echo System.PullRequest.IsFork value is $(System.PullRequest.IsFork)
+  displayName: 'System.PullRequest.IsFork value'
