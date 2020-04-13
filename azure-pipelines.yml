@@ -22,7 +22,7 @@ pool: Default
 steps:
 - checkout: self
 - checkout: helloworlddotnet
-- checkout: helloworlddotnet
+- checkout: pipelinesjava
 
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
