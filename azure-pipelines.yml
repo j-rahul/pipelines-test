@@ -9,7 +9,7 @@ resources:
     type: bitbucket
     endpoint: "bb-test"
     name: rjain6/hello-world-dot-net
-  - repository: "pipelinesjava"
+  - repository: "helloworlddotnet"
     type: github
     endpoint: "github-test"
     name: j-rahul/pipelines-java
@@ -20,6 +20,10 @@ trigger:
 pool: Default
 
 steps:
+- checkout: self
+- checkout: helloworlddotnet
+- checkout: helloworlddotnet
+
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
   
