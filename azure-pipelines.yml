@@ -9,7 +9,7 @@ resources:
     type: bitbucket
     endpoint: "bb-test"
     name: rjain6/hello-world-dot-net
-  - repository: "helloworlddotnet"
+  - repository: "pipelinesjava"
     type: github
     endpoint: "github-test"
     name: j-rahul/pipelines-java
