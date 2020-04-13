@@ -3,13 +3,15 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+resources:
+  repositories:
+  - repository: "helloworlddotnet"
+    type: bitbucket
+    endpoint: "bb-test"
+    name: rjain6/hello-world-dot-net
+    
 trigger:
-  branches:
-    include:
-    - '*'
-  tags:
-    exclude:
-    - '*'
+- master
     
 pool: Default
 
