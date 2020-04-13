@@ -9,6 +9,10 @@ resources:
     type: bitbucket
     endpoint: "bb-test"
     name: rjain6/hello-world-dot-net
+  - repository: "multirepoprivate"
+    type: github
+    endpoint: "test"
+    name: lkillgore/multirepoprivate
     
 trigger:
 - master
