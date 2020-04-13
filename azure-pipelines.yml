@@ -9,10 +9,10 @@ resources:
     type: bitbucket
     endpoint: "bb-test"
     name: rjain6/hello-world-dot-net
-  - repository: "multirepoprivate"
+  - repository: "pipelinesjava"
     type: github
-    endpoint: "test"
-    name: lkillgore/multirepoprivate
+    endpoint: "github-test"
+    name: j-rahul/pipelines-java
     
 trigger:
 - master
