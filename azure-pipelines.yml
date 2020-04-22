@@ -3,32 +3,23 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-resources:
-  repositories:
-  - repository: "helloworlddotnet"
-    type: bitbucket
-    endpoint: "bb-test"
-    name: rjain6/hello-world-dot-net
-  - repository: "pipelinesjava"
-    type: github
-    endpoint: "github-test"
-    name: j-rahul/pipelines-java
-    
 trigger:
 - master
-    
-pool: Default
+
+pool:
+  vmImage: 'ubuntu-latest'
 
 steps:
-- checkout: self
-- checkout: helloworlddotnet
-- checkout: pipelinesjava
-
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
-  
-- script: echo System.PullRequest.SourceBranch value is $(System.PullRequest.SourceBranch)
-  displayName: 'System.PullRequest.SourceBranch value'
 
-- script: echo System.PullRequest.IsFork value is $(System.PullRequest.IsFork)
-  displayName: 'System.PullRequest.IsFork value'
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
+
+- script: echo Access Token is $(System.AccessToken)
+  displayName: 'Access Token'
+
+- script: echo Fork var is $(System.PullRequest.IsFork)
+  displayName: 'IsFork'
