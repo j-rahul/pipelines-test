@@ -6,20 +6,22 @@
 trigger:
 - master
 
-pool:
-  vmImage: 'ubuntu-latest'
+pool: Default
 
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
+- script: echo Access Token is $(System.AccessToken)
+  displayName: 'Access Token'
+
+- script: echo Is Fork value is $(System.PullRequest.IsFork)
+  displayName: 'IsFork'
+
+- script: echo SourceBranch value is $(System.PullRequest.SourceBranch)
+  displayName: 'SourceBranch'
+
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
-
-- script: echo Access Token is $(System.AccessToken)
-  displayName: 'Access Token'
-
-- script: echo Fork var is $(System.PullRequest.IsFork)
-  displayName: 'IsFork'
