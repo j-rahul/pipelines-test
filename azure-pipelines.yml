@@ -3,8 +3,19 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger:
-- master
+trigger: 
+  batch: true
+  branches:
+    include:
+      - develop
+      - master
+      - release/*
+pr:
+  branches:
+    include:
+      - develop
+      - master
+      - release/*
 
 pool: 'default'
 
