@@ -3,19 +3,7 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
-trigger: 
-  batch: true
-  branches:
-    include:
-      - develop
-      - master
-      - release/*
-pr:
-  branches:
-    include:
-      - develop
-      - master
-      - release/*
+trigger: none
 
 pool:
  vm: "ubuntu-latest"
