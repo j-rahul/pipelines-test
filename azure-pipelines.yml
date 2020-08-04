@@ -17,7 +17,8 @@ pr:
       - master
       - release/*
 
-pool: "ubuntu-latest"
+pool: 
+  vm: "ubuntu-latest"
 
 steps:
 - script: echo Hello, world!
