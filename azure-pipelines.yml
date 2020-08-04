@@ -5,8 +5,7 @@
 
 trigger: none
 
-pool:
- vm: "ubuntu-latest"
+pool: 'default'
 
 steps:
 - script: echo Hello, world!
