@@ -21,7 +21,7 @@ resources:
   repositories:
   - repository: testmultirepo 
     type: git
-    name: testmultirepo/testmultirepo
+    name: abc/xyz
 
 pool: 
   vmImage: 'ubuntu-latest'
