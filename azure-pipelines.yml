@@ -17,7 +17,8 @@ pr:
       - master
       - release/*
 
-pool: 'default'
+pool: 
+  vmImage: 'ubuntu-latest'
 
 steps:
 - script: echo Hello, world!
