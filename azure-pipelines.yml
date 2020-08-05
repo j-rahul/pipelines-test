@@ -17,6 +17,12 @@ pr:
       - master
       - release/*
 
+resources:
+  repositories:
+  - repository: testmultirepo 
+    type: git
+    name: testmultirepo/testmultirepo
+
 pool: 
   vmImage: 'ubuntu-latest'
 
