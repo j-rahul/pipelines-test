@@ -9,6 +9,9 @@ trigger:
       include:
       - refs/tags/*
 
+pool:
+ vmImage: 'ubuntu-latest'
+
 stages:
 - stage: test
   jobs:
