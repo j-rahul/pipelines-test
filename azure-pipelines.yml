@@ -4,18 +4,22 @@
 # https://aka.ms/yaml
 
 trigger:
-    batch: true
-    branches:
-      include:
-      - refs/tags/*
+  - master
 
-pool:
- vmImage: 'ubuntu-latest'
+pool: default
 
-stages:
-- stage: test
-  jobs:
-  - job:
-    displayName: test
-    steps: 
-    - bash: echo hello
+steps:
+
+- script: |
+    echo Build.SourceBranch is $(Build.SourceBranch)
+    echo Build.SourceBranchName	 is $(Build.SourceBranchName)
+    echo Build.SourceVersion	is $(Build.SourceVersion)
+    echo Build.SourceVersionMessage	is $(Build.SourceVersionMessage)
+    echo Build.Repository.ID is $(Build.Repository.ID)
+    echo Build.Repository.Name is $(Build.Repository.Name)
+    echo Build.Repository.Provider is $(Build.Repository.Provider)
+    echo Build.Repository.Uri	is $(Build.Repository.Uri)
+  displayName: 'Build Vars'
+
+- script: echo Hello, worlld!
+  displayName: 'Run a one-line script'
