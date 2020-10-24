@@ -12,7 +12,8 @@ trigger:
    include:
      - mytag*
 
-pool: ubuntu-latest
+pool: 
+ vmImage: ubuntu-latest
 
 steps:
 
