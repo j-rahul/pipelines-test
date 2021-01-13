@@ -4,16 +4,13 @@
 # https://aka.ms/yaml
 
 trigger:
+  batch: true
   branches:
    include:
      - main
      - master
-  tags: 
-   include:
-     - mytag*
 
-pool: 
- vmImage: ubuntu-latest
+pool: default
 
 steps:
 
