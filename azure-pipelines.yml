@@ -4,14 +4,13 @@
 # https://aka.ms/yaml
 
 trigger:
-  #batch: true
+  batch: true
   branches:
    include:
      - main
      - master
 
-pool: 
- vmImage: 'ubuntu-latest'
+pool: default
 
 steps:
 
